@@ -1,10 +1,14 @@
 import React from 'react';
+import Header from "../components/Header";
 
 const services = () => {
   return (
-    <div>
-      This is the services page.
-    </div>
+    <>
+      <Header/>
+      <div>
+        This is the services page.
+      </div>
+    </>
   );
 }
 

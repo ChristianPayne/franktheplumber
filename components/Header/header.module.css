@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.list ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.list li {
+  padding: 1em;
+}
