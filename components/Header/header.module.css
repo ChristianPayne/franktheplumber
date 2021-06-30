@@ -1,3 +1,23 @@
+.font {
+  font-family: 'Roboto', sans-serif;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.white {
+  color: white;
+}
+
+.logo {
+  margin-left: 1em;
+  font-size: 2em;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -9,6 +29,7 @@
   display: flex;
 }
 
-.list li {
+.list li a {
   padding: 1em;
+  margin-right: 5em;
 }

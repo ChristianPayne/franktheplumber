@@ -14,3 +14,45 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.grid {
+  margin: 1em;
+  display: grid;
+
+  grid-template-areas:
+  'hero hero'
+  'meet-image meet'
+  'services-title services-title'
+  'services services'
+  'contact-title contact-title'
+  'contact contact';
+
+  grid-template-rows: 80vh 80vh 10vh 80vh 10vh 80vh;
+}
+
+.grid-item {
+  background-color: gray;
+  border: 1px solid black;
+}
+
+.hero {
+  grid-area: hero;
+}
+.meet-image {
+  grid-area: meet-image;
+}
+.meet {
+  grid-area: meet;
+}
+.services-title {
+  grid-area: services-title;
+}
+.services {
+  grid-area: services;
+}
+.contact-title {
+  grid-area: contact-title;
+}
+.contact {
+  grid-area: contact;
+}

@@ -2,17 +2,31 @@ import React from 'react';
 import style from './header.module.css'
 import Link from 'next/link'
 
-const Header = () => {
+type Props = {
+  absolute?: boolean,
+  white?: boolean,
+  logo?: boolean
+}
+
+const Header = (props: Props) => {
+  function handleProps () {
+    return `${props.absolute ? style.absolute : ""} ${props.white ? style.white : ''} ${style.font}`
+  }
+  
   return (
-      <header>
+      <header className={handleProps()}>
         <div className={style.flex}>
+          {/* Logo */}
           <div>
             {/* TODO: Add logo */}
             <Link href="/">
-              <a>Frank The<br/>Plumber</a>
+              <a className={props.logo ? style.logo : ""}>
+                Frank The Plumber
+              </a>
             </Link>
           </div>
 
+          {/* Nav Links */}
           <div className={style.list}>
             <ul>
               <li>
