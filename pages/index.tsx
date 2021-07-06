@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head title="Description of website."/>
-      <Header absolute white logo/>
+      <Header absolute logo/>
 
       <main className="grid">
         {/* Hero */}

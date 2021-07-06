@@ -33,3 +33,13 @@
   padding: 1em;
   margin-right: 5em;
 }
+
+@media screen and (max-width: 600px) {
+  .list {
+    display: none;
+  }
+
+  .flex {
+    justify-content: center;
+  }
+}
