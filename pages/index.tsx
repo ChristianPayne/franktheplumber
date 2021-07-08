@@ -1,27 +1,38 @@
-import Head from '../components/Head'
-import Image from 'next/image'
-import Header from '../components/Header'
+import Head from '../components/Head';
+import Header from '../components/Header';
+import MobileNav from '../components/MobileNav';
 
 export default function Home() {
+
+  function toggleMobileSidebar() {
+    console.log('test');
+  }
 
   return (
     <>
       <Head title="Description of website."/>
       <Header absolute logo/>
+      {/* <MobileNav/> */}
+
+      <div className="mobile-menu-button" onClick={toggleMobileSidebar}>
+        👉
+      </div>
 
       <main className="grid">
         {/* Hero */}
-        <div className="grid-item hero">Hero</div>
+        <div className="grid-item hero">
+          Hero Image
+        </div>
         {/* Meet Frank Image */}
-        <div className="grid-item meet-image">Meet Frank Image</div>
+        <div id="about" className="grid-item meet-image">Meet Frank Image</div>
         {/* Meet Frank */}
         <div className="grid-item meet">Meet Frank</div>
         {/* Services Title */}
-        <div className="grid-item services-title">Services Title</div>
+        <div id="services" className="grid-item services-title title">Services</div>
         {/* Services */}
         <div className="grid-item services">Services</div>
         {/* Contact Title */}
-        <div className="grid-item contact-title">Contact Title</div>
+        <div id="contact" className="grid-item contact-title title">Contact</div>
         {/* Contact */}
         <div className="grid-item contact">Contact</div>
 

@@ -14,24 +14,30 @@
 }
 
 .logo {
-  margin-left: 1em;
-  font-size: 2em;
+  margin: 1em;
+  cursor: pointer;
+  max-width: 25%;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
+  align-content: right;
   margin: 1em;
+}
+
+.list {
+  width: 50%;
 }
 
 .list ul {
   list-style-type: none;
   display: flex;
+  justify-content: flex-end;
 }
 
 .list li a {
   padding: 1em;
-  margin-right: 5em;
 }
 
 @media screen and (max-width: 600px) {
@@ -41,5 +47,18 @@
 
   .flex {
     justify-content: center;
+  }
+
+  .logo {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .logo {
+    max-width: 20%;
+  }
+  .list {
+    font-size: x-large;
   }
 }

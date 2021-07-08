@@ -1,6 +1,9 @@
 import React from 'react';
-import style from './header.module.css'
-import Link from 'next/link'
+import style from './header.module.css';
+import Link from 'next/link';
+import Image from "next/image";
+
+import Logo from "../../assets/FrankThePlumberLogo_150ppi.png";
 
 type Props = {
   absolute?: boolean,
@@ -17,12 +20,9 @@ const Header = (props: Props) => {
       <header className={handleProps()}>
         <div className={style.flex}>
           {/* Logo */}
-          <div>
-            {/* TODO: Add logo */}
+          <div className={style.logo}>
             <Link href="/">
-              <a className={props.logo ? style.logo : ""}>
-                Frank The Plumber
-              </a>
+              <Image src={Logo} alt="Frank The Plumber Logo" />
             </Link>
           </div>
 
@@ -30,17 +30,17 @@ const Header = (props: Props) => {
           <div className={style.list}>
             <ul>
               <li>
-                <Link href="/about">
+                <Link href="#about">
                   <a>About</a>
                 </Link>
               </li>
               <li>
-                <Link href="/services">
+                <Link href="#services">
                   <a>Services</a>
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
+                <Link href="#contact">
                   <a>Contact</a>
                 </Link>
               </li>

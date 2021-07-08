@@ -1,0 +1,32 @@
+.mobileNav {
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  .mobileNav {
+    display: block;
+    position: fixed;
+    background-color: white;
+    filter: drop-shadow(20px 0px 4px #22222238);
+    z-index: 200;
+    top: 0;
+    bottom: -10%;
+    left: 0;
+    right: 40%;
+  }
+
+  .closeButton {
+    position: fixed;
+    right: 0;
+    padding: 10%;
+    background: none;
+    border: none;
+  }
+  .closeButton p {
+    margin: 0;
+    font-size: large;
+  }
+  .closeButton:active {
+    background-color: red;
+  }
+}

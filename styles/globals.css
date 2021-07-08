@@ -30,14 +30,19 @@ a {
   'contact contact';
 }
 
+.mobile-menu-button {
+  display: none;
+}
+
 @media only screen and (max-width: 600px){
   .grid {
     margin: 0;
 
-    grid-template-rows: 80vh 80vh 10vh 80vh 10vh 80vh;
+    grid-template-rows: 80vh 40vh 40vh 10vh 80vh 10vh 80vh;
 
     grid-template-areas:
     'hero hero'
+    'meet-image meet-image'
     'meet meet'
     'services-title services-title'
     'services services'
@@ -45,14 +50,25 @@ a {
     'contact contact';
   }
 
-  .meet-image {
-    display: none;
+  .mobile-menu-button {
+    display: block;
+    background-color: red;
+    position: fixed;
+    top: 3%;
+    padding: 5%;
   }
 }
 
 .grid-item {
-  background-color: gray;
+  /* background-color: gray; */
   border: 1px solid black;
+}
+
+.title {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero {
