@@ -29,7 +29,7 @@ export default function Home() {
           <Image className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" width="700" height="600" alt="hero" src="https://dummyimage.com/720x600" />
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl my-4 font-medium text-gray-900">Your Plumber For Life</h1>
-            <p className="mb-8 leading-relaxed">Frank The Plumber is an independent Licensed Contractor. Frank specializes in repairs . We believe that we have become a throw away society and we want to install items that last. He wants to save you money. Install and repair quality items, not made in china junk. If you have vintage fixtures you wish to keep, Frank is the plumber that can fix them. He is a master at repair.</p>
+            <p className="mb-8 leading-relaxed">Frank The Plumber is an independent licensed contractor. Frank specializes in repairs. He wants to save you money by installing superior fixtures and equipment that last for many years and can be repaired instead of replaced. If you have vintage fixtures you wish to keep, Frank is the plumber who can fix them. He is a master at repair.</p>
             <div className="flex justify-center">
               <button className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Contact</button>
               {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Service You Can Trust</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Frank The Plumber is solely owned and operated by Frank. If you call for the master plumber, you get the master plumber at your door not an employee. We keep our overhead low to keep our prices down.</p>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Frank The Plumber is solely owned and operated by Frank. If you call for a plumber, you get the master plumber at your door, not an employee. We keep our overhead low to keep our prices down.</p>
           </div>
           <div className="flex flex-wrap -m-4 text-center">
             <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
