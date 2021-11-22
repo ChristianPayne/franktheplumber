@@ -3,7 +3,7 @@ import style from './header.module.css';
 import Link from 'next/link';
 import Image from "next/image";
 
-import Logo from "../../assets/FrankThePlumberLogo_150ppi.png";
+import Logo from "../../assets/FrankThePlumberLogo_75ppi.png";
 
 type Props = {
   absolute?: boolean,
@@ -18,7 +18,7 @@ const Header = (props: Props) => {
   
   return (
       <header className={handleProps()}>
-        <div className={style.flex}>
+        <div className={style.navPosition}>
           {/* Logo */}
           <div className={style.logo}>
             <Link href="/">
@@ -27,11 +27,11 @@ const Header = (props: Props) => {
           </div>
 
           {/* Nav Links */}
-          <div className={style.list}>
+          <div className={style.nav}>
             <ul>
               <li>
                 <Link href="#about">
-                  <a>About</a>
+                  <a>Meet Frank</a>
                 </Link>
               </li>
               <li>

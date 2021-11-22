@@ -18,31 +18,49 @@
   cursor: pointer;
   max-width: 25%;
 }
+.logo:active {
+  background-color: none;
+}
 
-.flex {
+.navPosition {
   display: flex;
   justify-content: space-between;
   align-content: right;
   margin: 1em;
 }
 
-.list {
+.nav {
   width: 50%;
 }
 
-.list ul {
+.nav ul {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
 }
 
-.list li a {
+.nav li a {
   padding: 1em;
 }
 
 @media screen and (max-width: 600px) {
-  .list {
-    display: none;
+  .navPosition {
+    display: block;
+    margin: 0em;
+  }
+
+  .nav {
+    display: block;
+    border-top: 1px black solid;
+    width: 100%;
+    padding: 0;
+  }
+  .nav ul {
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 
   .flex {
@@ -51,6 +69,8 @@
 
   .logo {
     max-width: 50%;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -58,7 +78,7 @@
   .logo {
     max-width: 20%;
   }
-  .list {
+  .nav {
     font-size: x-large;
   }
 }
