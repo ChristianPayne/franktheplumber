@@ -3,19 +3,20 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <>
-      <header className="text-gray-400 bg-gray-900 body-font">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-            {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+      <header className="text-gray-400 bg-gray-900 body-font fixed w-screen z-10">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-white">
+          <a className="cursor-pointer flex title-font font-medium items-center mb-4 md:mb-0" href="">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="mr-3 w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg> */}
-            <span className="ml-3 text-xl">Frank The Plumber</span>
+            <span className="text-xl p-2">Frank The Plumber</span>
           </a>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 hover:text-white">About</a>
-            <a className="mr-5 hover:text-white">Services</a>
+            <a className="cursor-pointer mr-5" href="about">About</a>
+            <a className="cursor-pointer mr-5" href="services">Services</a>
           </nav>
-          <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Contact
+          <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+            (714) 482-5144
             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -28,7 +29,7 @@ export default function Home() {
           <Image className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" width="700" height="600" alt="hero" src="https://dummyimage.com/720x600" />
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl my-4 font-medium text-gray-900">Your Plumber For Life</h1>
-            <p className="mb-8 leading-relaxed">Frank The Plumber is an independent Licensed Contractor. Frank specializes in repairs . We believe that we have become a throw away society and we want to install items that last. He wants to save you money. Install and repair quality items, not made in china junk. If you have vintage fixtures you wish to keep, Frank is the plumber that can fix them. He is a master at repair.</p>
+            <p className="mb-8 leading-relaxed">Frank The Plumber is an independent licensed contractor. Frank specializes in repairs. He wants to save you money by installing superior fixtures and equipment that last for many years and can be repaired instead of replaced. If you have vintage fixtures you wish to keep, Frank is the plumber who can fix them. He is a master at repair.</p>
             <div className="flex justify-center">
               <button className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Contact</button>
               {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
@@ -41,7 +42,7 @@ export default function Home() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Service You Can Trust</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Frank The Plumber is solely owned and operated by Frank. If you call for the master plumber, you get the master plumber at your door not an employee. We keep our overhead low to keep our prices down.</p>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Frank The Plumber is solely owned and operated by Frank. If you call for a plumber, you get the master plumber at your door, not an employee. We keep our overhead low to keep our prices down.</p>
           </div>
           <div className="flex flex-wrap -m-4 text-center">
             <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -151,7 +152,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <button className="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+          <button className="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Contact</button>
         </div>
       </section>
 
