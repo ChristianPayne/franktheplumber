@@ -1,4 +1,5 @@
 export default function Home () {
+  // Starting redesign
 
   let services = [
     "Bathrooms",
