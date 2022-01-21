@@ -86,21 +86,19 @@ export default function Home () {
       </section>
 
       <footer className="flex flex-col items-center justify-between px-4 py-12 mx-auto max-w-7xl md:flex-row">
-  <p className="mb-8 text-sm text-center text-gray-700 md:text-left md:mb-0">Frank The Plumber | State License #C36-967360</p>
-  <div className="flex items-center space-x-6">
-    <a href="https://www.facebook.com/Frank-the-Plumber-184190448331140/" target="_blank" rel="noreferrer">
-      <span className="sr-only">Facebook</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1298" height="2500" viewBox="88.428 12.828 107.543 207.085" className="w-5 h-5" aria-hidden="true">
-        <path
-          d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z"
-          fill="#3c5a9a"
-        />
-      </svg>
-    </a>
-  </div>
-</footer>
-
-
+        <p className="mb-8 text-sm text-center text-gray-700 md:text-left md:mb-0">Frank The Plumber | State License #C36-967360</p>
+        <div className="flex items-center space-x-6">
+          <a href="https://www.facebook.com/Frank-the-Plumber-184190448331140/" target="_blank" rel="noreferrer">
+            <span className="sr-only">Facebook</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1298" height="2500" viewBox="88.428 12.828 107.543 207.085" className="w-5 h-5" aria-hidden="true">
+              <path
+                d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z"
+                fill="#3c5a9a"
+              />
+            </svg>
+          </a>
+        </div>
+      </footer>
     </>
   )
 }
