@@ -3,6 +3,9 @@
  */
  const nextConfig = {
   /* config options here */
+  env: {
+    
+  },
   images: {
     domains: ['dummyimage.com'],
   },
