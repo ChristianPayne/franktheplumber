@@ -2,13 +2,17 @@ import '../styles/globals.css'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useAnalytics } from '../lib/googleAnalyticsHook';
+import MobileNav from '../components/MobileNav';
+import Header from '../components/Header';
 
 function App({ Component, pageProps }: AppProps) {
   
   let {gtag, onButtonClick} = useAnalytics()
+
+  const [isNavShowing, setIsNavShowing] = useState(false)
 
   // Add a lang tag to the html tag to get SEO 100%
   useEffect(() => {
@@ -51,13 +55,12 @@ function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet" />
         <title>Frank The Plumber</title>
       </Head>
-
-      {/* <button className='p-2 bg-green-400 rounded m-4 border-2 border-black'
-      onClick={()=>{onButtonClick("test_button")}}>
-        Test
-      </button> */}
       
-      <Component {...pageProps} />
+      <div className="fixed inset-0">
+        <Header onNav={()=> setIsNavShowing(true)}/>
+        <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)}/>
+        <Component {...pageProps} />
+      </div>
     </>
   ) 
 }

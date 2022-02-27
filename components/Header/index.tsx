@@ -1,53 +1,25 @@
 import React from 'react';
-import style from './header.module.css';
 import Link from 'next/link';
-import Image from "next/image";
-
-import Logo from "../../assets/FrankThePlumberLogo_75ppi.png";
+import Logo from '../Logo';
 
 type Props = {
-  absolute?: boolean,
-  white?: boolean,
-  logo?: boolean
+  onNav: ()=>any
 }
 
-const Header = (props: Props) => {
-  function handleProps () {
-    return `${props.absolute ? style.absolute : ""} ${props.white ? style.white : ''} ${style.font}`
-  }
+const Header = ({onNav}: Props) => {
   
   return (
-      <header className={handleProps()}>
-        <div className={style.navPosition}>
-          {/* Logo */}
-          <div className={style.logo}>
-            <Link href="/">
-              <Image src={Logo} alt="Frank The Plumber Logo" />
-            </Link>
-          </div>
+      <div className='flex justify-between'>
+        <Link href="/">
+          <Logo/>
+        </Link>
 
-          {/* Nav Links */}
-          <div className={style.nav}>
-            <ul>
-              <li>
-                <Link href="#about">
-                  <a>Meet Frank</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#services">
-                  <a>Services</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact">
-                  <a>Contact</a>
-                </Link>
-              </li>
-            </ul>
-          </div>
+        <div className='p-4 cursor-pointer flex items-center' onClick={onNav}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
+          </svg>
         </div>
-      </header>
+      </div>
   );
 }
 
