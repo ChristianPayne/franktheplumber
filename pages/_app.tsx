@@ -4,21 +4,11 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import { useEffect } from 'react';
 import Head from 'next/head';
-import * as gtag from '../lib/gtag'
+import { useAnalytics } from '../lib/googleAnalyticsHook';
 
 function App({ Component, pageProps }: AppProps) {
   
-  // Google Analytics
-  const router = useRouter()
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+  let {gtag, onButtonClick} = useAnalytics()
 
   // Add a lang tag to the html tag to get SEO 100%
   useEffect(() => {
@@ -61,6 +51,11 @@ function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet" />
         <title>Frank The Plumber</title>
       </Head>
+
+      {/* <button className='p-2 bg-green-400 rounded m-4 border-2 border-black'
+      onClick={()=>{onButtonClick("test_button")}}>
+        Test
+      </button> */}
       
       <Component {...pageProps} />
     </>
