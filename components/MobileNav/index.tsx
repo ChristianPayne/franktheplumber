@@ -18,13 +18,15 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
     <>
       <Transition
         show={isOpen}
+        appear={true}
+        unmount={false}
         enter="transition-opacity duration-75"
-        enterFrom="opacity-0"
+        enterFrom="opacity-0 -translate-y-full"
         enterTo="opacity-100"
         leave="transition-opacity duration-150"
         leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-        className="h-full fixed inset-0 bg-white">
+        leaveTo="opacity-0 -translate-y-full"
+        className="h-full fixed inset-0 bg-white ease-in-out transition-transform">
         <nav className='h-full'>
           <Logo />
           <div className='flex flex-col h-full justify-around'>

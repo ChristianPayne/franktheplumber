@@ -9,6 +9,7 @@ export function useAnalytics () {
   }
 
   useEffect(()=>{
+    //@ts-ignore
     window.gtag('config', gtag.GA_TRACKING_ID, {
       debug: true,
     })
