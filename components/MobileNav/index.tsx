@@ -43,7 +43,11 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
               </div>
             </div>
             <div className='h-64 flex items-center justify-center'>
-              <button className='bg-gray-700 w-16 h-16 rounded-full text-3xl text-white' onClick={close}>X</button>
+              <button className='bg-gray-700 w-16 h-16 rounded-full text-white flex items-center justify-center' onClick={close}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
           </div>
         </nav>
