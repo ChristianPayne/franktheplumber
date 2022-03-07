@@ -4,6 +4,15 @@ module.exports = {
     './components/**/*.{html,tsx}',
   ],
   theme: {
-    extend: {},
+    colors: {
+      main: {
+        '1' : '#FFFFFF',
+        '2' : '#EEF0F2'
+      },
+      accent: {
+        '1' : '#4A4A4A',
+        '2' : '#A21E21'
+      },
+    }
   },
 }

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useAnalytics } from '../lib/googleAnalyticsHook';
 import MobileNav from '../components/MobileNav';
-import Header from '../components/Header';
+import { Header } from '../components/Header';
 
 function App({ Component, pageProps }: AppProps) {
   

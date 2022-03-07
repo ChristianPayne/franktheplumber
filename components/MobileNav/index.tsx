@@ -26,7 +26,7 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
         leave="transition-opacity duration-150"
         leaveFrom="opacity-100"
         leaveTo="opacity-0 -translate-y-full"
-        className="h-full fixed inset-0 bg-white ease-in-out transition-transform">
+        className="h-full fixed inset-0 bg-accent-1 text-main-1 ease-in-out transition-transform">
         <nav className='h-full'>
           <Logo />
           <div className='flex flex-col h-full justify-around'>
@@ -35,17 +35,14 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
                 <Link href='/'>Home</Link>
               </div>
               <div className='block' onClick={close}>
-                <Link href='/interiors'>Interiors</Link>
-              </div>
-              <div className='block' onClick={close}>
-                <Link href='/exteriors'>Exteriors</Link>
+                <Link href='/services'>Services</Link>
               </div>
               <div className='block' onClick={close}>
                 <Link href='/contact'>Contact</Link>
               </div>
             </div>
             <div className='h-64 flex items-center justify-center'>
-              <button className='bg-gray-700 w-16 h-16 rounded-full text-white flex items-center justify-center' onClick={close}>
+              <button className='bg-accent-2 w-16 h-16 rounded-full text-main-1 flex items-center justify-center' onClick={close}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
