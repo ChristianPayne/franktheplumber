@@ -5,8 +5,9 @@ import Script from 'next/script'
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useAnalytics } from '../lib/googleAnalyticsHook';
-import MobileNav from '../components/MobileNav';
+import { MobileNav } from '../components/MobileNav';
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 function App({ Component, pageProps }: AppProps) {
   
@@ -45,21 +46,21 @@ function App({ Component, pageProps }: AppProps) {
         }}
       />
       {/* End Google Analytics */}
+      
       <Head>
-
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Font */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet" />
         <title>Frank The Plumber</title>
       </Head>
       
       <div className="fixed inset-0">
-        <Header onNav={()=> setIsNavShowing(true)}/>
-        <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)}/>
-        <Component {...pageProps} />
+        <div className='flex flex-col h-full w-full'>
+          <Header onNav={()=> setIsNavShowing(true)}/>
+          <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)}/>
+          <div className="grow">
+            <Component {...pageProps}/>
+          </div>
+          <Footer/>
+        </div>
       </div>
     </>
   ) 

@@ -1,6 +1,6 @@
 import React from 'react'; 
 import Link from 'next/link';
-import Logo from "../Logo";
+import { Logo } from "../Logo";
 import { Transition } from '@headlessui/react'
 
 type Props = {
@@ -20,17 +20,19 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
         show={isOpen}
         appear={true}
         unmount={false}
-        enter="transition-opacity duration-75"
+        enter="transition-all duration-75"
         enterFrom="opacity-0 -translate-y-full"
         enterTo="opacity-100"
-        leave="transition-opacity duration-150"
+        leave="transition-all duration-150"
         leaveFrom="opacity-100"
         leaveTo="opacity-0 -translate-y-full"
-        className="h-full fixed inset-0 bg-accent-1 text-main-1 ease-in-out transition-transform">
+        className="h-full fixed inset-0 bg-accent-1 text-main-1 z-50">
         <nav className='h-full'>
-          <Logo />
           <div className='flex flex-col h-full justify-around'>
-            <div className='space-y-16 font-sans uppercase text-center text-xl'>
+            <div className="flex justify-center">
+              <Logo size='large'/>
+            </div>
+            <div className='space-y-16 uppercase text-center text-xl font-montserrat tracking-widest'>
               <div className='block' onClick={close}>
                 <Link href='/'>Home</Link>
               </div>

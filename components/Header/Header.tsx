@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Logo from '../Logo';
+import { Logo } from '../Logo';
 
 type Props = {
   onNav: ()=>any
@@ -11,7 +11,7 @@ const Header = ({onNav}: Props) => {
   return (
       <div className='flex justify-between'>
         <Link href="/">
-          <Logo/>
+          <Logo size='medium' className='ml-4'/>
         </Link>
 
         <div className='p-4 cursor-pointer flex items-center' onClick={onNav}>

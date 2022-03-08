@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat-Regular.ttf') format('tff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat-Bold.ttf') format('tff');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .content {
+    @apply p-4 font-montserrat font-normal 
+  }
 }
