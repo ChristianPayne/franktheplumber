@@ -10,7 +10,7 @@
 
   @font-face {
     font-family: Montserrat;
-    src: url('../assets/fonts/Montserrat-Regular.ttf') format('tff');
+    src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf') format('tff');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -18,7 +18,7 @@
 
   @font-face {
     font-family: Montserrat;
-    src: url('../assets/fonts/Montserrat-Bold.ttf') format('tff');
+    src: url('../assets/fonts/Montserrat/Montserrat-Bold.ttf') format('tff');
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -27,6 +27,6 @@
 
 @layer components {
   .content {
-    @apply p-4 font-montserrat font-normal 
+    @apply p-4 font-montserrat font-normal tracking-wider z-10
   }
 }

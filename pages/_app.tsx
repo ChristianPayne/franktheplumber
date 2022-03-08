@@ -53,7 +53,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       
       <div className="fixed inset-0">
-        <div className='flex flex-col h-full w-full'>
+        <div className='flex flex-col h-full w-full overflow-y-scroll'>
           <Header onNav={()=> setIsNavShowing(true)}/>
           <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)}/>
           <div className="grow">
