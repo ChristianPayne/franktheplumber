@@ -29,7 +29,7 @@ export default function services () {
       </div>
 
       {/* Swiper */}
-      <ServicesSwiper/>
+      {/* <ServicesSwiper/> */}
 
       <div className="content">
         <Button name="Contact" href="/contact" className="mb-12 bg-accent-2 text-main-1"/>

@@ -19,4 +19,8 @@ module.exports = {
       montserrat: 'Montserrat, sans-serif'
     }
   },
+  plugins: [
+    require('@tailwindcss/forms'),
+    // ...
+  ],
 }
