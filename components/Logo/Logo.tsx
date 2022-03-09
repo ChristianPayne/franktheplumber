@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Image from "next/image";
 import Frank_Logo from "/assets/logo/Frank_Logo.svg";
 import FrankThePlumber_Logo from "/assets/logo/FrankThePlumber.svg";
@@ -9,8 +9,7 @@ type Props = {
   className?: string
 }
 
-export default function Logo ({size = 'small', className=""}: Props) {
-
+const Logo = forwardRef(({size = 'small', className=""}: Props, ref) => {
   function getLogo (logoSize) {
     switch (logoSize) {
       case 'small':
@@ -18,15 +17,17 @@ export default function Logo ({size = 'small', className=""}: Props) {
       case 'medium':
         return <Image src={FrankThePlumber_Logo} height={100} width={160} alt="Logo" />;
       case 'large':
-        return <Image src={FrankThePlumber_Logo_Full} height={140} width={300} alt="Logo" />;
+        return <Image src={FrankThePlumber_Logo_Full} alt="Logo" className={className}/>;
       default:
         throw new Error (`Logo size incorrect. Passed in '${logoSize}'`);
     }
   }
 
   return (
-    <div className={className}>
-      { getLogo(size) }
-    </div>
+    getLogo(size)
   )
-}
+})
+
+Logo.displayName = "Stupid Linter";
+
+export default Logo

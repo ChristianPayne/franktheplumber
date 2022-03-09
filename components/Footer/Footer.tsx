@@ -11,11 +11,14 @@ const Footer = () => {
       <footer>
         <p className='font-montserrat p-8'>
           License Number
-          <p className='text-4xl'>C36-967360</p>
+          <br/>
+          <span className='text-4xl'>C36-967360</span>
         </p>
         <div className='bg-accent-1 text-main-1 p-6'>
           <div className="flex justify-between my-4">
-            <Logo size='large' className='w-1/2'/>
+            <div className="w-2/5">
+              <Logo size='large' className='w-1/2'/>
+            </div>
             <div className='flex flex-col justify-around w-1/2'>
               <div className="p-2 active:bg-accent-2">
                 <Link href='/' >About</Link>

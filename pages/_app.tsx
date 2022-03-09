@@ -56,10 +56,10 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       
       <div className="fixed inset-0">
-        <div className='flex flex-col h-full w-full overflow-y-scroll'>
+        <div className='flex flex-col h-full w-full overflow-y-scroll relative'>
           <Header onNav={()=> setIsNavShowing(true)}/>
           <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)}/>
-          <div className="grow">
+          <div className="grow mt-24">
             <Component {...pageProps}/>
           </div>
           <Footer/>

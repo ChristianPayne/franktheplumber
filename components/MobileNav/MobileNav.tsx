@@ -20,17 +20,19 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
         show={isOpen}
         appear={true}
         unmount={false}
-        enter="transition-all duration-75"
+        enter="transition-all duration-600"
         enterFrom="opacity-0 -translate-y-full"
         enterTo="opacity-100"
-        leave="transition-all duration-150"
+        leave="transition-all duration-200"
         leaveFrom="opacity-100"
         leaveTo="opacity-0 -translate-y-full"
         className="h-full fixed inset-0 bg-accent-1 text-main-1 z-50">
         <nav className='h-full'>
           <div className='flex flex-col h-full justify-around'>
             <div className="flex justify-center">
-              <Logo size='large'/>
+              <div className="w-1/2">
+                <Logo size='large'/>
+              </div>
             </div>
             <div className='space-y-16 uppercase text-center text-xl font-montserrat tracking-widest'>
               <div className='block' onClick={close}>
