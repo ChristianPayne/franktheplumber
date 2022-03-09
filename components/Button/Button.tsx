@@ -22,7 +22,7 @@ const Button = ({name, href, className, onClick}: Props) => {
   
   return (
     <div className='px-4'>
-      <button className={'content w-full rounded-md bg-main-3 text-main-1 active:bg-accent-2 ' + className} onClick={e => getOnClick(e)}>
+      <button className={'p-4 w-full rounded-md ' + className} onClick={e => getOnClick(e)}>
         <Link href={getHref()} passHref>
           <div className='flex justify-between'>
             { name }

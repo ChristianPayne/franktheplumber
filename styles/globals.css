@@ -27,6 +27,6 @@
 
 @layer components {
   .content {
-    @apply p-4 font-montserrat font-normal tracking-wider z-10
+    @apply p-8 font-montserrat font-normal text-lg tracking-wider z-10 
   }
 }
