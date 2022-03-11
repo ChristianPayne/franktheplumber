@@ -34,7 +34,7 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
                 <Logo size='large'/>
               </div>
             </div>
-            <div className='space-y-16 uppercase text-center text-xl font-montserrat tracking-widest'>
+            <div className='space-y-16 uppercase text-center text-xl tracking-widest'>
               <div className='block' onClick={close}>
                 <Link href='/'>Home</Link>
               </div>

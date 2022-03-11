@@ -55,7 +55,7 @@ function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></link>
       </Head>
       
-      <div className="fixed inset-0">
+      <div className="fixed inset-0 font-montserrat">
         <div className='flex flex-col h-full w-full overflow-y-scroll relative'>
           <Header onNav={()=> setIsNavShowing(true)}/>
           <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)}/>

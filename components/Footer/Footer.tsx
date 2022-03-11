@@ -9,7 +9,7 @@ const Footer = () => {
   
   return (
       <footer>
-        <p className='font-montserrat p-8'>
+        <p className='p-8'>
           License Number
           <br/>
           <span className='text-4xl'>C36-967360</span>

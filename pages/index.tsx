@@ -9,7 +9,7 @@ export default function Index () {
       <div className="relative w-full h-96">
         <Image src="https://dummyimage.com/400x600/666666/fff.jpg" layout='fill' objectFit="cover" alt="WorkImage1"/>
         <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-accent-1"></div>
-        <h1 className="font-montserrat text-5xl text-main-1 absolute left-8 bottom-8 uppercase">&quot;Your <br/>plumber <br/>for life&quot;</h1>
+        <h1 className="text-5xl text-main-1 absolute left-8 bottom-8 uppercase">&quot;Your <br/>plumber <br/>for life&quot;</h1>
       </div>
 
       <div className="content bg-accent-1 text-main-1 mb-12">
@@ -24,7 +24,7 @@ export default function Index () {
       <div className="relative w-full h-96">
         <Image src="https://dummyimage.com/400x600/666666/fff.jpg" layout='fill' objectFit="cover" alt="WorkImage1"/>
         <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-main-1"></div>
-        <h1 className="font-montserrat text-5xl font-bold absolute left-8 bottom-8">&quot;No job <br/>too small.&quot;</h1>
+        <h1 className=" text-5xl font-bold absolute left-8 bottom-8">&quot;No job <br/>too small.&quot;</h1>
       </div>
 
       <div className="content">
