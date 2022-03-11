@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Logo } from "../Logo";
 import { Transition } from '@headlessui/react'
+import { useRouter } from 'next/router';
 
 type Props = {
   isOpen: boolean,
@@ -10,7 +11,10 @@ type Props = {
 
 const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
 
-  function close () {
+  let router = useRouter();
+
+  function close (route?: string) {
+    if(route) router.push(route);
     onClose()
   }
 
@@ -34,19 +38,19 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
                 <Logo size='large'/>
               </div>
             </div>
-            <div className='space-y-16 uppercase text-center text-xl tracking-widest'>
-              <div className='block' onClick={close}>
-                <Link href='/'>Home</Link>
+            <div className='space-y-8 uppercase text-center text-xl tracking-widest'>
+              <div className='block p-4' onClick={() => close('/')}>
+                <h2>Home</h2>
               </div>
-              <div className='block' onClick={close}>
-                <Link href='/services'>Services</Link>
+              <div className='block p-4' onClick={() => close('/services')}>
+                <h2>Services</h2>
               </div>
-              <div className='block' onClick={close}>
-                <Link href='/contact'>Contact</Link>
+              <div className='block p-4' onClick={() => close('/contact')}>
+                <h2>Contact</h2>
               </div>
             </div>
             <div className='h-64 flex items-center justify-center'>
-              <button className='bg-accent-2 w-16 h-16 rounded-full text-main-1 flex items-center justify-center' onClick={close}>
+              <button className='bg-accent-2 w-16 h-16 rounded-full text-main-1 flex items-center justify-center' onClick={() => close()}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>

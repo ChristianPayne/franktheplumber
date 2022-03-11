@@ -10,9 +10,14 @@ export function useAnalytics () {
 
   useEffect(()=>{
     //@ts-ignore
-    window.gtag('config', gtag.GA_TRACKING_ID, {
-      debug: true,
-    })
+    if(window.gtag) {
+      //@ts-ignore
+      window.gtag('config', gtag.GA_TRACKING_ID, {
+        debug: true,
+      })
+    } else {
+      console.warn('Window gtag not found.');
+    }
   }, [])
 
   // Google Analytics
