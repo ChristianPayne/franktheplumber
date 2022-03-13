@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { Button } from "../components/Button";
-import { Email } from "../components/Email";
 
 export default function Contact () {
   return (
@@ -15,7 +14,7 @@ export default function Contact () {
     </div>
 
     <div className="py-12 space-y-8">
-      <Button name="Email" className="bg-main-3 text-main-1" href=""/>
+      <Button name="Email" className="bg-main-3 text-main-1" href="contact/email"/>
       {/* (714) 482-5144 */}
       <Button name="Call" className="bg-main-3 text-main-1" href=""/>
       <Button name="Facebook" className="bg-main-3 text-main-1" href=""/>

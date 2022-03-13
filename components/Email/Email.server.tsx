@@ -20,24 +20,12 @@ export default function Email () {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <div className="block">
-        <label>First Name</label>
-        <input type="text" name="first_name" />
-      </div>
-      <div className="block">
-        <label>Last Name</label>
-        <input type="text" name="last_name" />
-      </div>
-      <div className="block">
-        <label>Email</label>
-        <input type="email" name="email" />
-      </div>
-      <div className="block">
-        <label>Message</label>
-        <textarea name="message" />
-      </div>
-      <input type="submit" value="Send" />
+    <form ref={form} onSubmit={sendEmail} className="space-y-4">
+      <input type="text" name="first_name" placeholder="First Name" className="block rounded-md w-full"/>
+      <input type="text" name="last_name" placeholder="Last Name" className="block rounded-md w-full"/>
+      <input type="email" name="email" placeholder="Email" className="block rounded-md w-full"/>
+      <textarea name="message" placeholder="Let us know how we can help you..." className="block rounded-md w-full"/>
+      <input type="submit" value="Send" className="p-2 w-full bg-accent-2 text-main-1 rounded-md" />
     </form>
   );
 }
