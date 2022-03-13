@@ -16,8 +16,8 @@ export default function Contact () {
     <div className="py-12 space-y-8">
       <Button name="Email" className="bg-main-3 text-main-1 active:bg-accent-2" href="contact/email"/>
       {/* (714) 482-5144 */}
-      <Button name="Call" className="bg-main-3 text-main-1" href=""/>
-      <Button name="Facebook" className="bg-main-3 text-main-1" href=""/>
+      <Button name="Call" className="bg-main-3 text-main-1 active:bg-accent-2" href="tel:+17144825144"/>
+      <Button name="Facebook" className="bg-main-3 text-main-1 active:bg-accent-2" href="https://www.facebook.com/Frank-the-Plumber-184190448331140"/>
     </div>
 
     {/* <Email/> */}
