@@ -17,7 +17,7 @@ const Header = ({onNav}: Props) => {
         <Logo size='large'/>
       </div>
       {/* Medium logo */}
-      <div className='ml-8 w-48 h-full flex justify-center align-middle' onClick={() => router.push('/')}>
+      <div className='ml-8 w-56 h-full flex justify-center align-middle' onClick={() => router.push('/')}>
         <Logo size='medium'/>
       </div>
       {/* Menu button the right */}
