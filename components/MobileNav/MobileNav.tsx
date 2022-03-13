@@ -34,7 +34,7 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
         <nav className='h-full'>
           <div className='flex flex-col h-full justify-around'>
             <div className="flex justify-center">
-              <div className="w-1/2">
+              <div className="w-1/2" onClick={() => close('/')}>
                 <Logo size='large'/>
               </div>
             </div>
