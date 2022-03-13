@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Email as EmailComponent} from "../../../components/Email";
 
-export function Email () {
+export default function Email () {
   return (
     <div className='mt-24 bg-accent-1'>
       <div className="relative w-full h-96">
