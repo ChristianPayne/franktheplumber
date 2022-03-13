@@ -13,7 +13,7 @@ export default function Index () {
       </div>
 
       <div className="content bg-accent-1 text-main-1 mb-12">
-        <p>Frank is an independent Licensed Contractor that believes in doing it right the first time. He uses the highest quality parts available to ensure the work he does lasts.
+        <p>Frank is an independent licensed contractor that believes in doing it right the first time. He uses the highest quality parts available to ensure the work he does lasts.
         When they say they don’t make them like they used to it’s because they have not met Frank.</p>
       </div>
 
@@ -30,7 +30,7 @@ export default function Index () {
       <div className="content">
         <p className="mb-12">Whether it be a flooded bathroom or a leaky faucet, Frank will stop by to inspect what needs to be done. His priority is making you feel comfortable calling him for any issue that might arise.</p>
         <Button name="Contact" href="/contact" className="mb-12 bg-accent-2 text-main-1"/>
-        <p>Licensed plumber proudly servicing the Southern California Region for over 25 years.</p>
+        <p>Licensed plumber proudly servicing the Southern California region for over 25 years.</p>
       </div>
     </div>
   )

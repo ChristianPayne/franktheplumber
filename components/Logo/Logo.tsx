@@ -15,7 +15,7 @@ const Logo = forwardRef(({size = 'small', className=""}: Props, ref) => {
       case 'small':
         return <Image src={Frank_Logo} height={100} width={160} alt="Logo" />;
       case 'medium':
-        return <Image src={FrankThePlumber_Logo} height={100} width={160} alt="Logo" />;
+        return <Image src={FrankThePlumber_Logo} alt="Logo" />;
       case 'large':
         return <Image src={FrankThePlumber_Logo_Full} alt="Logo" className={className}/>;
       default:

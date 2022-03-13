@@ -10,8 +10,9 @@ type Props = {
 }
 
 const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
-
   let router = useRouter();
+
+  let currentRoute = router.pathname;
 
   function close (route?: string) {
     if(route) router.push(route);
@@ -39,14 +40,14 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
               </div>
             </div>
             <div className='space-y-8 uppercase text-center text-xl tracking-widest'>
-              <div className='block p-4' onClick={() => close('/')}>
-                <h2>Home</h2>
+              <div className='p-4 flex justify-center' onClick={() => close('/')}>
+                <h2 className={`${currentRoute === '/' ? 'border-b-4 border-accent-2' : ''}`}>Home</h2>
               </div>
-              <div className='block p-4' onClick={() => close('/services')}>
-                <h2>Services</h2>
+              <div className='p-4 flex justify-center' onClick={() => close('/services')}>
+                <h2 className={`${currentRoute === '/services' ? 'border-b-4 border-accent-2' : ''}`}>Services</h2>
               </div>
-              <div className='block p-4' onClick={() => close('/contact')}>
-                <h2>Contact</h2>
+              <div className='p-4 flex justify-center' onClick={() => close('/contact')}>
+                <h2 className={`${currentRoute === '/contact' ? 'border-b-4 border-accent-2' : ''}`}>Contact</h2>
               </div>
             </div>
             <div className='h-64 flex items-center justify-center'>
