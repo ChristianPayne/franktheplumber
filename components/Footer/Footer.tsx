@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Logo } from '../Logo';
 import { useRouter } from 'next/router';
 
 type Props = {
+  mainPageRef
 }
 
-const Footer = () => {
+const Footer = ({mainPageRef}: Props) => {
   const router = useRouter()
+  const [fixFooter, setFixFooter] = useState(false);
+
+  useEffect(() => {
+    if(mainPageRef.current === undefined) {
+      console.log("I'm broken");
+    } else {
+      console.log("Main Ref", mainPageRef);    
+      console.log(mainPageRef.current.clientHeight, window.screen.height);
+      
+      if(mainPageRef.current.clientHeight < window.screen.height) {
+        setFixFooter(true)
+      } else {
+        setFixFooter(false)
+      }
+    }
+
+  }, [mainPageRef.current])
   
   return (
-      <footer>
+      <footer className={`${fixFooter ? 'fixed bottom-0' : '' }`}>
         <p className='p-8'>
           License Number
           <br/>
