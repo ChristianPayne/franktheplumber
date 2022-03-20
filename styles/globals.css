@@ -17,6 +17,14 @@
 
   @font-face {
     font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat/Montserrat-Medium.ttf') format('tff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Montserrat;
     src: url('../assets/fonts/Montserrat/Montserrat-Bold.ttf') format('tff');
     font-weight: 700;
     font-display: swap;
@@ -27,5 +35,9 @@
 @layer components {
   .content {
     @apply p-8 font-montserrat font-normal text-lg tracking-wider z-10 
+  }
+
+  #services-content-swiper .swiper-pagination-bullet-active {
+    @apply bg-accent-2
   }
 }

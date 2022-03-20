@@ -7,12 +7,11 @@ export default function services () {
 
   return (
     <>
-      {/* <h1 className="text-5xl text-main-1 absolute left-8 bottom-8 uppercase">Services</h1> */}
-      {/* <div className="relative w-full h-96">
-        <Image src="https://dummyimage.com/400x600/666666/fff.jpg" layout='fill' objectFit="cover" alt="WorkImage1"/>
-        <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-accent-1"></div>
-        <h1 className="text-5xl text-main-1 absolute left-8 bottom-8 uppercase">Services</h1>
-      </div> */}
+      <div className="p-4">
+        <h1 className="text-5xl my-8 text-main-3 uppercase font-medium">Services</h1>
+        <ServicesSwiper/>
+        
+      </div>
 
       {/* <div className="content bg-accent-1 text-main-1 mb-12">
         <ul className="list-disc px-4">
@@ -29,7 +28,6 @@ export default function services () {
       </div> */}
 
       {/* Swiper */}
-      {/* <ServicesSwiper/> */}
 
       <div className="content">
         <Button name="Contact" href="/contact" className="mb-12 bg-accent-2 text-main-1"/>

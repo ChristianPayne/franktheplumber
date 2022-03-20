@@ -26,6 +26,7 @@ export default function Email () {
       <input type="text" name="first_name" required placeholder="First Name" className="block rounded-md w-full"/>
       <input type="text" name="last_name" required placeholder="Last Name" className="block rounded-md w-full"/>
       <input type="email" name="email" required placeholder="Your Email" className="block rounded-md w-full"/>
+      <input type="tel" name="phone" required placeholder="Your Phone Number" className="block rounded-md w-full"/>
       <textarea name="message" required placeholder="Let us know how we can help you..." className="block rounded-md w-full"/>
       <input disabled={emailSent} type="submit" value="Send" className={`p-2 w-full ${!emailSent ? 'bg-accent-2' : 'bg-main-3'} text-main-1 rounded-md`}/>
     </form>
