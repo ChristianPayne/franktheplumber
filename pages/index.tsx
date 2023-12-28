@@ -15,7 +15,7 @@ export default function Index() {
       <div className="content bg-accent-1 text-main-1 mb-12 space-y-4">
         <p>Frank is an independent licensed contractor that believes in doing it right the first time.</p>
         <p>He uses the highest quality parts available to ensure the work he does lasts.</p>
-        <p>When they say they don't make them like they used to it's because they have not met Frank.</p>
+        <p>When they say they don&apos;t make them like they used to it&apos;s because they have not met Frank.</p>
       </div>
 
       <div className="content">
