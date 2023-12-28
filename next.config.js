@@ -17,6 +17,7 @@ const nextConfig = {
   // },
   // target: 'serverless',
   output: 'standalone',
+  distDir: 'out'
 }
 
 module.exports = nextConfig
