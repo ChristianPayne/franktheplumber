@@ -15,7 +15,8 @@ const nextConfig = {
   //   runtime: 'nodejs',
   //   serverComponents: true,
   // },
-  target: 'serverless'
+  // target: 'serverless',
+  output: 'standalone',
 }
 
 module.exports = nextConfig
