@@ -1,10 +1,10 @@
 /**
  * @type {import('next').NextConfig}
  */
- const nextConfig = {
+const nextConfig = {
   /* config options here */
   env: {
-    
+
   },
   images: {
     domains: ['dummyimage.com'],
@@ -15,6 +15,7 @@
   //   runtime: 'nodejs',
   //   serverComponents: true,
   // },
+  target: 'serverless'
 }
 
 module.exports = nextConfig
