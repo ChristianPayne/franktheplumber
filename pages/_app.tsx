@@ -15,31 +15,31 @@ function App({ Component, pageProps }: AppProps) {
 
   // Set the footer to a fixed position if the page is smaller than the screen.
   useEffect(() => {
-    if(mainRef.current === undefined || mainRef.current === null) {
+    if (mainRef.current === undefined || mainRef.current === null) {
       console.log("I'm broken");
     } else {
       //@ts-ignore
-      console.log(mainRef.current.clientHeight, window.screen.height);
-      
+      // console.log(mainRef.current.clientHeight, window.screen.height);
+
       //@ts-ignore
-      mainRef.current.clientHeight < (window.screen.height * 0.7) ? setFixFooter(true) : setFixFooter(false)
+      mainRef.current.clientHeight < (window.screen.height * 0.7) && window.screen.height < 720 ? setFixFooter(true) : setFixFooter(false)
     }
   }, [router.pathname])
-  
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col max-w-[1920px] mx-auto">
       <Head>
         <title>Frank The Plumber</title>
       </Head>
-      
-      <Header onNav={()=> setIsNavShowing(true)}/>
-      <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)}/>
+
+      <Header onNav={() => setIsNavShowing(true)} />
+      <MobileNav isOpen={isNavShowing} onClose={() => setIsNavShowing(false)} />
       <div ref={mainRef} className="grow">
-        <Component {...pageProps}/>
+        <Component {...pageProps} />
       </div>
-      <Footer fixed={fixFooter}/>
+      <Footer fixed={fixFooter} />
     </div>
-  ) 
+  )
 }
 
 export default App

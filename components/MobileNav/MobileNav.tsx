@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import Link from 'next/link';
 import { Logo } from "../Logo";
 import { Transition } from '@headlessui/react'
@@ -9,13 +9,13 @@ type Props = {
   onClose?: Function
 }
 
-const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
+const MobileNav = ({ isOpen = false, onClose = () => { } }: Props) => {
   let router = useRouter();
 
   let currentRoute = router.pathname;
 
-  function close (route?: string) {
-    if(route) router.push(route);
+  function close(route?: string) {
+    if (route) router.push(route);
     onClose()
   }
 
@@ -36,7 +36,7 @@ const MobileNav = ({isOpen = false, onClose = ()=>{}}: Props) => {
           <div className='flex flex-col h-full justify-around'>
             <div className="flex justify-center">
               <div className="w-1/2" onClick={() => close('/')}>
-                <Logo size='large'/>
+                <Logo size='large' />
               </div>
             </div>
             <div className='space-y-8 uppercase text-center text-xl tracking-widest'>

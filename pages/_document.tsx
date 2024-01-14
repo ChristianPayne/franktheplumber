@@ -4,27 +4,27 @@ import { useAnalytics } from '../lib/googleAnalyticsHook';
 import { GTag } from '../lib/gtag';
 
 
-export default function Document () {
+export default function Document() {
 
   let gtag = new GTag;
-  
+
   return (
-      <Html lang='en'>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Html lang='en'>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"></link>
 
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-          />
-          <Script
-            id="gtag-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -33,17 +33,17 @@ export default function Document () {
                   page_path: window.location.pathname,
                 });
               `,
-            }}
-          />
-          {/* End Google Analytics */}
-        </Head>
+          }}
+        />
+        {/* End Google Analytics */}
+      </Head>
 
-        <body className='font-montserrat overflow-y-scroll'>
-          <div className="mt-24">
-            <Main />
-          </div>
-          <NextScript />
-        </body>
-      </Html>
+      <body className='font-montserrat overflow-y-scroll'>
+        <div className="mt-24 lg:mt-36">
+          <Main />
+        </div>
+        <NextScript />
+      </body>
+    </Html>
   )
 }

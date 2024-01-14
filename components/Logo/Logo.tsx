@@ -9,17 +9,17 @@ type Props = {
   className?: string
 }
 
-const Logo = forwardRef(({size = 'small', className=""}: Props, ref) => {
-  function getLogo (logoSize) {
+const Logo = forwardRef(({ size = 'small', className = "" }: Props, ref) => {
+  function getLogo(logoSize) {
     switch (logoSize) {
       case 'small':
         return <Image src={Frank_Logo} height={100} width={160} alt="Logo" />;
       case 'medium':
         return <Image src={FrankThePlumber_Logo} alt="Logo" />;
       case 'large':
-        return <Image src={FrankThePlumber_Logo_Full} alt="Logo" className={className}/>;
+        return <Image src={FrankThePlumber_Logo_Full} width={400} alt="Logo" className={className} />;
       default:
-        throw new Error (`Logo size incorrect. Passed in '${logoSize}'`);
+        throw new Error(`Logo size incorrect. Passed in '${logoSize}'`);
     }
   }
 
