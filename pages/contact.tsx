@@ -2,22 +2,35 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { Button } from "../components/Button";
 
-export default function Contact () {
+export default function Contact() {
   return (
-   <div className="bg-accent-1">
-     <div className="relative w-full h-96">
-      <Image src="https://dummyimage.com/400x600/666666/fff.jpg" layout='fill' objectFit="cover" alt="WorkImage1"/>
-      <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-accent-1"></div>
-      <h1 className="text-5xl text-main-1 absolute left-8 bottom-8 uppercase">
-        Reach out<br/> today
-      </h1>
-    </div>
+    <div className="">
+      {/* Mobile */}
+      <div className="relative w-full h-96 lg:hidden">
+        <Image src="/images/frank_the_plumber_sink_2.jpeg" layout='fill' objectFit="cover" alt="WorkImage2" />
+        <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-accent-1"></div>
+        <h1 className="text-5xl text-main-1 absolute left-8 bottom-8 uppercase">
+          Reach out<br /> today
+        </h1>
+      </div>
+      {/* Desktop */}
+      <div className="w-full h-96 hidden lg:flex">
+        <div className="relative h-full w-1/2">
+          <Image src="/images/frank_the_plumber_sink_2.jpeg" layout='fill' objectFit="cover" alt="WorkImage2" />
+        </div>
 
-    <div className="py-12 space-y-8">
-      <Button name="Email" className="bg-main-3 text-main-1 active:bg-accent-2" href="contact/email"/>
-      <Button name="Call" className="bg-main-3 text-main-1 active:bg-accent-2" href="tel:+17144825144"/>
-      <Button name="Facebook" className="bg-main-3 text-main-1 active:bg-accent-2" href="https://www.facebook.com/Frank-the-Plumber-184190448331140" />
+        <h1 className="text-5xl bg-accent-1 text-main-1 uppercase w-1/2">
+          <div className="flex items-center justify-center h-full font-medium">
+            <p>Reach out<br /> today</p>
+          </div>
+        </h1>
+      </div>
+
+      <div className="py-12 space-y-8 lg:mx-auto lg:w-1/2 flex flex-col items-center justify-center">
+        <Button name="Email" className="bg-main-3 text-main-1 hover:bg-accent-2" href="contact/email" />
+        <Button name="Call" className="bg-main-3 text-main-1 hover:bg-accent-2" href="tel:+17144825144" />
+        <Button name="Facebook" className="bg-main-3 text-main-1 hover:bg-accent-2" href="https://www.facebook.com/Frank-the-Plumber-184190448331140" />
+      </div>
     </div>
-   </div>
   )
 }

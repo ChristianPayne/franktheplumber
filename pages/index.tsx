@@ -57,13 +57,13 @@ export default function Index() {
       <div className="lg:hidden relative w-full h-[500px]">
         <Image src="/images/frank_the_plumber_sink_1.jpeg" layout='fill' objectFit="cover" alt="Underneath sink" />
         <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-main-1"></div>
-        <h1 className=" text-5xl font-medium absolute left-8 bottom-8">No job <br />too small</h1>
+        <h1 className="text-5xl font-medium absolute left-8 bottom-8">No job <br />too small</h1>
       </div>
 
       {/* Desktop */}
-      <div className="hidden lg:flex w-full h-[500px]">
+      <div className="hidden lg:flex w-full h-[500px] bg-accent-1">
         <div className="w-1/2 flex items-center justify-center">
-          <h1 className="text-5xl font-medium uppercase">No job <br />too small</h1>
+          <h1 className="text-5xl text-main-1 font-medium uppercase">No job <br />too small</h1>
         </div>
         <div className="relative w-1/2">
           <Image src="/images/frank_the_plumber_sink_1.jpeg" layout='fill' objectPosition="top" objectFit="cover" alt="Underneath sink" />
@@ -71,8 +71,8 @@ export default function Index() {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="content space-y-12 lg:w-1/2">
-          <p className="">Whether it be a flooded bathroom or a leaky faucet, Frank will stop by to inspect what needs to be done. His priority is making you feel comfortable calling him for any issue that might arise.</p>
+        <div className="content space-y-12">
+          <p className="">Whether it be a flooded bathroom or a leaky faucet, Frank will stop by to inspect what needs to be done. <br /> His priority is making you feel comfortable calling him for any issue that might arise.</p>
           <div className="flex justify-center">
             <Button name="Contact" href="/contact" className=" bg-accent-2 text-main-1" />
           </div>

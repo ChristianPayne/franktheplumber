@@ -17,7 +17,7 @@ const Logo = forwardRef(({ size = 'small', className = "" }: Props, ref) => {
       case 'medium':
         return <Image src={FrankThePlumber_Logo} alt="Logo" />;
       case 'large':
-        return <Image src={FrankThePlumber_Logo_Full} width={400} alt="Logo" className={className} />;
+        return <Image src={FrankThePlumber_Logo_Full} width={400} alt="Logo" className={"cursor-pointer " + className} />;
       default:
         throw new Error(`Logo size incorrect. Passed in '${logoSize}'`);
     }
