@@ -3,7 +3,7 @@
  */
 const nextConfig = {
   images: {
-    domains: ['dummyimage.com'],
+    domains: [],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
