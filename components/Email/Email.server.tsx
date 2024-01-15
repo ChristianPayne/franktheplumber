@@ -1,26 +1,34 @@
 import React, { useRef, useState } from "react";
-import { sendForm } from '@emailjs/browser';
-
-let { NEXT_PUBLIC_EMAILJS_SERVICE } = process.env;
-let { NEXT_PUBLIC_EMAILJS_TEMPLATE } = process.env;
-let { NEXT_PUBLIC_EMAILJS_USERID } = process.env;
 
 export default function Email() {
   const form = useRef();
   let [emailSent, setEmailSent] = useState(false);
+  let [lockButton, setLockButton] = useState(false);
+  let [buttonText, setButtonText] = useState("Send");
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    setEmailSent(true);
+    setLockButton(true);
 
-    console.log(NEXT_PUBLIC_EMAILJS_SERVICE, NEXT_PUBLIC_EMAILJS_TEMPLATE, NEXT_PUBLIC_EMAILJS_USERID)
+    const formData = new FormData(form.current);
+    const data = {};
 
-    sendForm(NEXT_PUBLIC_EMAILJS_SERVICE, NEXT_PUBLIC_EMAILJS_TEMPLATE, form.current, NEXT_PUBLIC_EMAILJS_USERID)
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log("GOT AN ERROR:", error.text);
-      });
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    let response = await fetch("/api/email", {
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+    if (response.ok === false) {
+      setEmailSent(false);
+      setLockButton(false);
+      setButtonText("Error!");
+    } else {
+      setEmailSent(true);
+      setButtonText("Email sent!");
+    }
   };
 
   return (
@@ -39,7 +47,7 @@ export default function Email() {
           <input type="email" name="email" required placeholder="Your email" className="block rounded-md w-full" />
           <input type="tel" name="phone" required placeholder="Your phone number" className="block rounded-md w-full" />
           <textarea name="message" required placeholder="What needs to be done?" className="block rounded-md w-full" />
-          <input disabled={emailSent} type="submit" value={emailSent === false ? "Send" : "Sent!"} className={`p-2 w-full ${!emailSent ? 'bg-accent-2 cursor-pointer' : 'bg-main-3'} text-main-1 rounded-md`} />
+          <input disabled={lockButton} type="submit" value={buttonText} className={`p-2 w-full ${!lockButton ? 'bg-accent-2 cursor-pointer' : 'bg-main-3'} text-main-1 rounded-md`} />
         </form>
       }
     </div>

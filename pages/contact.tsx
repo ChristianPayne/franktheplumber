@@ -21,15 +21,18 @@ export default function Contact() {
 
         <h1 className="text-5xl bg-accent-1 text-main-1 uppercase w-1/2">
           <div className="flex items-center justify-center h-full font-medium">
-            <p>Reach out<br /> today</p>
+            <div>
+              <p>Reach out<br /> today</p>
+              <p className="font-normal">(714) 482-5144</p>
+            </div>
           </div>
         </h1>
       </div>
 
       <div className="py-12 space-y-8 lg:mx-auto lg:w-1/2 flex flex-col items-center justify-center">
         <Button name="Email" className="bg-main-3 text-main-1 hover:bg-accent-2" href="contact/email" />
-        <Button name="Call" className="bg-main-3 text-main-1 hover:bg-accent-2" href="tel:+17144825144" />
-        <Button name="Facebook" className="bg-main-3 text-main-1 hover:bg-accent-2" href="https://www.facebook.com/Frank-the-Plumber-184190448331140" />
+        <Button name="Call" className="lg:hidden bg-main-3 text-main-1 hover:bg-accent-2" href="tel:+17144825144" />
+        <Button name="Yelp" className="bg-main-3 text-main-1 hover:bg-accent-2" href="https://www.yelp.com/biz/frank-the-plumber-la-habra" />
       </div>
     </div>
   )
