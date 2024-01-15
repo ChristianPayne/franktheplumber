@@ -1,105 +1,84 @@
-export default function Home () {
+import Image from "next/image";
+import { useState } from "react";
+import { Button } from "../components/Button";
 
-  let services = [
-    "Bathrooms",
-    "Kitchens",
-    "Laundry Rooms",
-    "Gas Lines",
-    "Decorative",
-  ]
-
-  let stats = [
-    {
-      stat: "25+",
-      title: "Years Of Service"
-    },
-    {
-      stat: "2000+",
-      title: "Customers Served"
-    },
-    {
-      stat: "30K+",
-      title: "Installs"
-    },
-    {
-      stat: "10+",
-      title: "Cities Covered"
-    },
-  ]
+export default function Index() {
 
   return (
-    <>
-      <section className="px-4 pt-16 md:py-32 mx-auto lg:max-w-7xl">
-        <div className="w-full mx-auto text-center md:w-11/12 xl:w-8/12 md:text-center">
-          <h1 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl md:leading-tight md:font-extrabold">Frank The Plumber</h1>
-          <div className="flex items-center justify-center">
-            <p className="bg-green-100 w-1/2 rounded text-gray-900 font-bold p-1 m-2">
-              (714) 482-5144
-            </p>
-          </div>
-          <p className="mb-6 text-lg text-gray-500 md:text-xl md:leading-normal">
-          Frank The Plumber is an independent licensed contractor. Frank specializes in repairs. He wants to save you money by installing superior fixtures and equipment that last for many years and can be repaired instead of replaced. If you have vintage fixtures you wish to keep, Frank is the plumber who can fix them. <span className="font-semibold">He is a master at repair.</span>
-          </p>
+    <div>
+      {/* Mobile Hero */}
+      <div className="lg:hidden">
+        <div className="relative w-full h-[500px]">
+          <Image src="/images/frank_the_plumber_headshot_1.jpeg" layout='fill' objectFit="cover" alt="Frank The Plumber" objectPosition="top" loading="lazy" />
+          <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-accent-1"></div>
+          <h1 className="text-5xl text-main-1 absolute left-8 bottom-8 uppercase">Your <br />plumber <br />for life</h1>
+        </div>
 
-          
-          <div className="flex flex-col justify-start items-center mb-3 space-x-0 space-y-4 text-xs text-gray-600 sm:flex-row sm:justify-center sm:space-x-8 sm:space-y-0">
-          {
-            services.map((element)=>{
-                return (
-                  <>
-                    <div className="flex items-center">
-                      <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 mr-1 text-green-600">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                      </svg>
-                      {element}
-                    </div>
-                </>)
-            })
-          }
+        <div className="content bg-accent-1 text-main-1 mb-12 space-y-4 lg:w-1/2">
+          <p>Frank is an independent licensed contractor that believes in doing it right the first time.</p>
+          <p>He uses the highest quality parts available to ensure the work he does lasts.</p>
+          <p>When they say they don&apos;t make them like they used to it&apos;s because they have not met Frank.</p>
+        </div>
+      </div>
+
+      {/* Desktop Hero */}
+      <div className="hidden lg:block">
+        <div className="lg:h-[540px] 2xl:h-[1200px] flex relative">
+          <div className="h-full w-1/2 relative overflow-hidden">
+            <Image
+              src="/images/frank_the_plumber_headshot_1.jpeg"
+              alt="Frank The Plumber"
+              loading="lazy"
+              fill={true}
+              objectPosition="top"
+              objectFit="cover"
+            />
+          </div>
+          <div className="relative w-1/2 flex h-full items-center justify-center">
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-accent-1"></div> */}
+            <h1 className="text-6xl font-medium text-main-3 uppercase">Your <br />plumber <br />for life</h1>
           </div>
         </div>
-      </section>
 
-      <section className="px-4 py-12 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {
-            stats.map((element)=>{
-              return (
-                <>
-                  <div className="flex flex-row justify-center items-center p-5">
-                    <div className="flex items-center justify-center w-10 h-10 text-green-700 bg-green-100 rounded">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-none w-5 h-5">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="ml-3 w-full">
-                      <h2 className="mb-1 text-lg font-bold leading-none text-gray-900 truncate">{element.stat}</h2>
-                      <p className="text-sm leading-none text-gray-600">{element.title}</p>
-                    </div>
-                  </div>
-                </>
-              )
-            })
-          }
+        <div className="content bg-accent-1 lg:bg-main-1 text-main-1 lg:text-accent-1 mb-12 space-y-4 flex items-center justify-center">
+          <div>
+            <p>Frank is an independent licensed contractor that believes in doing it right the first time.</p>
+            <p>He uses the highest quality parts available to ensure the work he does lasts.</p>
+            <p>When they say they don&apos;t make them like they used to it&apos;s because they have not met Frank.</p>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <footer className="flex flex-col items-center justify-between px-4 py-12 mx-auto max-w-7xl md:flex-row">
-  <p className="mb-8 text-sm text-center text-gray-700 md:text-left md:mb-0">Frank The Plumber | State License #C36-967360</p>
-  <div className="flex items-center space-x-6">
-    <a href="https://www.facebook.com/Frank-the-Plumber-184190448331140/" target="_blank" rel="noreferrer">
-      <span className="sr-only">Facebook</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1298" height="2500" viewBox="88.428 12.828 107.543 207.085" className="w-5 h-5" aria-hidden="true">
-        <path
-          d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z"
-          fill="#3c5a9a"
-        />
-      </svg>
-    </a>
-  </div>
-</footer>
+      <div className="content flex justify-center">
+        <Button name="Schedule an Appointment" href="/contact" className="mb-12 bg-accent-2 text-main-1" />
+      </div>
 
+      {/* Mobile */}
+      <div className="lg:hidden relative w-full h-[500px]">
+        <Image src="/images/frank_the_plumber_sink_1.jpeg" layout='fill' objectFit="cover" alt="Underneath sink" />
+        <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-main-1"></div>
+        <h1 className="text-5xl font-medium absolute left-8 bottom-8">No job <br />too small</h1>
+      </div>
 
-    </>
+      {/* Desktop */}
+      <div className="hidden lg:flex w-full h-[500px] bg-accent-1">
+        <div className="w-1/2 flex items-center justify-center">
+          <h1 className="text-5xl text-main-1 font-medium uppercase">No job <br />too small</h1>
+        </div>
+        <div className="relative w-1/2">
+          <Image src="/images/frank_the_plumber_sink_1.jpeg" layout='fill' objectPosition="top" objectFit="cover" alt="Underneath sink" />
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center">
+        <div className="content space-y-12">
+          <p className="">Whether it be a flooded bathroom or a leaky faucet, Frank will stop by to inspect what needs to be done. <br /> His priority is making you feel comfortable calling him for any issue that might arise.</p>
+          <div className="flex justify-center">
+            <Button name="Contact" href="/contact" className=" bg-accent-2 text-main-1" />
+          </div>
+          <p>Licensed plumber proudly servicing the Southern California region for over 25 years.</p>
+        </div>
+      </div>
+    </div>
   )
 }
