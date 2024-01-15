@@ -43,9 +43,9 @@ const MobileNav = ({ isOpen = false, onClose = () => { } }: Props) => {
               <div className='p-4 flex justify-center' onClick={() => close('/')}>
                 <h2 className={`${currentRoute === '/' ? 'border-b-4 border-accent-2' : ''}`}>Home</h2>
               </div>
-              <div className='p-4 flex justify-center' onClick={() => close('/services')}>
+              {/* <div className='p-4 flex justify-center' onClick={() => close('/services')}>
                 <h2 className={`${currentRoute === '/services' ? 'border-b-4 border-accent-2' : ''}`}>Services</h2>
-              </div>
+              </div> */}
               <div className='p-4 flex justify-center' onClick={() => close('/contact')}>
                 <h2 className={`${currentRoute === '/contact' ? 'border-b-4 border-accent-2' : ''}`}>Contact</h2>
               </div>
