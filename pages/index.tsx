@@ -50,7 +50,7 @@ export default function Index() {
       </div>
 
       <div className="content flex justify-center">
-        <Button name="Schedule an Appointment" href="/contact" className="mb-12 bg-accent-2 text-main-1" />
+        <Button name="Schedule an Appointment" href="/contact" className="mb-12 bg-accent-2 hover:bg-accent-3 text-main-1" />
       </div>
 
       {/* Mobile */}
@@ -75,7 +75,7 @@ export default function Index() {
           <p className="">Whether it be a flooded bathroom or a leaky faucet, Frank will stop by to inspect what needs to be done. <br /> His priority is making you feel comfortable calling him for any issue that might arise.</p>
           <p>Licensed plumber proudly servicing the Southern California region for over 25 years.</p>
           <div className="flex justify-center">
-            <Button name="Contact" href="/contact" className=" bg-accent-2 text-main-1" />
+            <Button name="Contact" href="/contact" className=" bg-accent-2 hover:bg-accent-3 text-main-1" />
           </div>
         </div>
       </div>
