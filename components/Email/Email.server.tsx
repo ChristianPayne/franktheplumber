@@ -47,7 +47,7 @@ export default function Email() {
           <input type="email" name="email" required placeholder="Your email" className="block rounded-md w-full" />
           <input type="tel" name="phone" required placeholder="Your phone number" className="block rounded-md w-full" />
           <textarea name="message" required placeholder="What needs to be done?" className="block rounded-md w-full" />
-          <input disabled={lockButton} type="submit" value={buttonText} className={`p-2 w-full ${!lockButton ? 'bg-accent-2 cursor-pointer' : 'bg-main-3'} text-main-1 rounded-md`} />
+          <input disabled={lockButton} type="submit" value={buttonText} className={`p-2 w-full ${!lockButton ? 'bg-accent-2 hover:bg-accent-3 cursor-pointer' : 'bg-main-3'} text-main-1 rounded-md`} />
         </form>
       }
     </div>
