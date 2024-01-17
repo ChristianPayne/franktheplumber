@@ -18,9 +18,9 @@ export default function Email() {
           <EmailComponent />
         </div>
         <div className="p-8 space-y-4">
-          <h1 className="text-5xl">Or email us at:</h1>
-          <div>
-            <a className="button p-4 bg-accent-2 text-main-1 rounded-md" href="mailto:frankyourplumber@gmail.com">frankyourplumber@gmail.com</a>
+          <h1 className="text-3xl text-center">Or email us at:</h1>
+          <div className="flex items-center justify-center">
+            <a className="button p-4 bg-accent-2 text-main-1 rounded-md text-lg" href="mailto:frankyourplumber@gmail.com">frankyourplumber@gmail.com</a>
           </div>
         </div>
       </div>
@@ -37,10 +37,10 @@ export default function Email() {
           </div>
         </div>
         <div className="p-8 flex items-center justify-center">
-          <div className="space-y-4">
-            <h1 className="text-5xl">Or email us at:</h1>
+          <div className="space-y-8">
+            <h1 className="text-3xl text-center">Or email us at:</h1>
             <div>
-              <a className="button p-4 bg-accent-1 hover:bg-accent-2 text-main-1 rounded-md" href="mailto:frankyourplumber@gmail.com">frankyourplumber@gmail.com</a>
+              <a className="button p-4 bg-accent-2 hover:bg-accent-3 text-main-1 rounded-md text-xl" href="mailto:frankyourplumber@gmail.com">frankyourplumber@gmail.com</a>
             </div>
           </div>
         </div>

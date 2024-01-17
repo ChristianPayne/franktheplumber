@@ -30,9 +30,9 @@ export default function Contact() {
       </div>
 
       <div className="py-12 space-y-8 lg:mx-auto lg:w-1/2 flex flex-col items-center justify-center">
-        <Button name="Email" className="bg-main-3 text-main-1 hover:bg-accent-2" href="contact/email" />
-        <Button name="Call" className="lg:hidden bg-main-3 text-main-1 hover:bg-accent-2" href="tel:+17144825144" />
-        <Button name="Yelp" className="bg-main-3 text-main-1 hover:bg-accent-2" href="https://www.yelp.com/biz/frank-the-plumber-la-habra" />
+        <Button name="Email" className="bg-accent-2 text-main-1 hover:bg-accent-3" href="contact/email" />
+        <Button name="Call" className="lg:hidden bg-accent-2 text-main-1 hover:bg-accent-3" href="tel:+17144825144" />
+        <Button name="Yelp" className="bg-accent-2 text-main-1 hover:bg-accent-3" href="https://www.yelp.com/biz/frank-the-plumber-la-habra" />
       </div>
     </div>
   )

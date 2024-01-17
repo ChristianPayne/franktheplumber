@@ -73,10 +73,10 @@ export default function Index() {
       <div className="flex items-center justify-center">
         <div className="content space-y-12">
           <p className="">Whether it be a flooded bathroom or a leaky faucet, Frank will stop by to inspect what needs to be done. <br /> His priority is making you feel comfortable calling him for any issue that might arise.</p>
+          <p>Licensed plumber proudly servicing the Southern California region for over 25 years.</p>
           <div className="flex justify-center">
             <Button name="Contact" href="/contact" className=" bg-accent-2 text-main-1" />
           </div>
-          <p>Licensed plumber proudly servicing the Southern California region for over 25 years.</p>
         </div>
       </div>
     </div>
