@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import Image from "next/image";
 import Frank_Logo from "/assets/logo/Frank_Logo.svg";
 import FrankThePlumber_Logo from "/assets/logo/FrankThePlumber.svg";
-import FrankThePlumber_Logo_Full from "/assets/logo/FrankThePlumber_Logo_Full.svg";
+import FrankThePlumber_Logo_Full from "/assets/logo/FrankThePlumber_Logo_Full_Trademark.svg";
 
 type Props = {
   size: 'small' | 'medium' | 'large',
