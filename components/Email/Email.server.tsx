@@ -1,13 +1,26 @@
 import React, { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Email() {
   const form = useRef();
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   let [emailSent, setEmailSent] = useState(false);
   let [lockButton, setLockButton] = useState(false);
   let [buttonText, setButtonText] = useState("Send");
+  let [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  let [error, setError] = useState<string | null>(null);
+
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   const sendEmail = async (e) => {
     e.preventDefault();
+
+    if (!captchaToken) {
+      setError("Please verify that you are not a robot.");
+      return;
+    }
+
+    setError(null);
     setLockButton(true);
 
     const formData = new FormData(form.current);
@@ -17,6 +30,8 @@ export default function Email() {
       data[key] = value;
     });
 
+    data["g-recaptcha-response"] = captchaToken;
+
     let response = await fetch("/api/email", {
       method: "POST",
       body: JSON.stringify(data)
@@ -25,6 +40,8 @@ export default function Email() {
       setEmailSent(false);
       setLockButton(false);
       setButtonText("Error!");
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
     } else {
       setEmailSent(true);
       setButtonText("Email sent!");
@@ -47,6 +64,15 @@ export default function Email() {
           <input type="email" name="email" required placeholder="Your email" className="block rounded-md w-full" />
           <input type="tel" name="phone" required placeholder="Your phone number" className="block rounded-md w-full" />
           <textarea name="message" required placeholder="What needs to be done?" className="block rounded-md w-full" />
+          {siteKey &&
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={siteKey}
+              onChange={(token) => setCaptchaToken(token)}
+              onExpired={() => setCaptchaToken(null)}
+            />
+          }
+          {error && <p className="text-red-600 text-sm">{error}</p>}
           <input disabled={lockButton} type="submit" value={buttonText} className={`p-2 w-full ${!lockButton ? 'bg-accent-2 hover:bg-accent-3 cursor-pointer' : 'bg-main-3'} text-main-1 rounded-md`} />
         </form>
       }
